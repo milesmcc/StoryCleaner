@@ -11,6 +11,6 @@ def clean_text(text):
             # line separation will be re-added on rendering later
         usable_lines.append(line)
     last_line = usable_lines[-1].strip()
-    if not (last_line.endswith(".") or last_line.endswith("!")): # end is not a full sentence
+    if not (last_line.endswith(".") or last_line.endswith("!") or last_line.endswith("\"")): # end is not a full sentence
         usable_lines.remove(last_line)
     return "\n\n".join(usable_lines)
