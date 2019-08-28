@@ -14,7 +14,7 @@ while True:
     if text_input.lower() == "save\n":
         with open("output.txt", "w") as outfile:
             for i in range(len(articles)):
-                outfile.write("ARTICLE %s of %s\n\n" % (i, len(articles)))
+                outfile.write("ARTICLE %s of %s -- Ordering: ___ / %s\n\n" % (i, len(articles), len(articles)))
                 outfile.write(articles[i])
                 outfile.write("\n----------\n\n")
         break

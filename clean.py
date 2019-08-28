@@ -9,7 +9,7 @@ def clean_text(text):
         if len(line.strip()) == 0: # no text; just a linebreak
             continue
             # line separation will be re-added on rendering later
-        usable_lines.append(line)
+        usable_lines.append(line.strip())
     last_line = usable_lines[-1].strip()
     if not (last_line.endswith(".") or last_line.endswith("!") or last_line.endswith("\"")): # end is not a full sentence
         usable_lines.remove(last_line)
